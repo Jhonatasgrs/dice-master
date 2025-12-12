@@ -11,6 +11,8 @@ export function parseExpression(rawExpr) {
         throw new Error("Expressão contém caracteres inválidos");
     }
 
+    const allowedFaces = [4, 6, 8, 10, 12, 20, 100];
+
     const dicePattern = /(\d*)d(\d+)/g;
     const dice = [];
     let match;
@@ -18,8 +20,12 @@ export function parseExpression(rawExpr) {
         const count = Number(match[1]) || 1;
         const faces = Number(match[2]);
 
-        if (count < 1 || count > 500) throw new Error("Quantidade de dados inválida (min 1, max 500)");
-        if (faces < 2 || faces > 10000) throw new Error("Número de faces inválido (min 2, max 10000)");
+        if (count < 1 || count > 100) {
+            throw new Error("Quantidade de dados inválida (1 a 100).");
+        }
+        if (!allowedFaces.includes(faces)) {
+            throw new Error(`Faces inválidas: d${faces}. Permitidos: d4, d6, d8, d10, d12, d20, d100.`);
+        }
         dice.push({ count, faces });
     }
 

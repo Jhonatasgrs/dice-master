@@ -1,4 +1,14 @@
 # Dice-Master
+![JavaScript](https://img.shields.io/badge/JavaScript-ES6+-yellow)
+![HTML5](https://img.shields.io/badge/HTML5-5-orange)
+![CSS3](https://img.shields.io/badge/CSS3-3-blue)
+![Node.js](https://img.shields.io/badge/Node.js-20+-green)
+![Express](https://img.shields.io/badge/Express-5.0-blue)
+![API](https://img.shields.io/badge/API-REST-blueviolet)
+![Crypto](https://img.shields.io/badge/Crypto-secure%20random-lightgrey)
+![Project Type](https://img.shields.io/badge/Type-Fullstack-purple)
+![License](https://img.shields.io/badge/License-MIT-orange)
+
 O Dice-Master é uma aplicação web simples e elegante para rolagem de dados de RPG.
 Inclui uma API em Node.js/Express e uma interface minimalista em HTML/CSS para enviar expressões como ``1d20+2``, ``2d6``, ``1d100``, etc.
 

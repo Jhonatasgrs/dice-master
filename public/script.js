@@ -2,7 +2,7 @@ async function roll() {
     const expr = document.getElementById("expr").value;
     if (!expr) return;
 
-    const res = await fetch(`http://localhost:3000/api/roll?expr=${expr}`);
+    const res = await fetch(`/api/roll?expr=${encodeURIComponent(expr)}`);
     const data = await res.json();
 
     const card = document.getElementById("result-card");

@@ -104,3 +104,10 @@ button:hover {
     opacity: 1;
     transform: translateY(0);
 }
+
+.allowed-dice {
+    text-align: center;
+    font-size: 0.9rem;
+    color: #555;
+    margin-bottom: 20px;
+}

@@ -8,10 +8,15 @@ async function roll() {
     const card = document.getElementById("result-card");
 
     document.getElementById("r-expression").textContent = data.expression;
-    document.getElementById("r-breakdown").textContent = data.breakdown.join(", ");
+
+    // Exibir breakdown bonito
+    const breakdownText = data.breakdown
+        .map(b => `d${b.faces}: [${b.rolls.join(", ")}]`)
+        .join(" | ");
+
+    document.getElementById("r-breakdown").textContent = breakdownText;
     document.getElementById("r-total").textContent = data.total;
 
-    // Mostra o card com animação
     card.classList.remove("hidden");
     card.classList.add("fade-in");
     setTimeout(() => card.classList.add("show"), 10);

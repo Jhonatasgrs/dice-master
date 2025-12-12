@@ -29,6 +29,10 @@ export function parseExpression(rawExpr) {
         dice.push({ count, faces });
     }
 
+    if (dice.length === 0) {
+        throw new Error("Nenhum dado encontrado na expressão.");
+    }
+
     const modifierPattern = /([+-]\d+)$/;
     const modMatch = expr.match(modifierPattern);
     const modifier = modMatch ? Number(modMatch[1]) : 0;

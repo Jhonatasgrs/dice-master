@@ -4,14 +4,27 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dice-Master</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>Dice-Master 🎲</h1>  
-    
-    <input id="expr" placeholder="Ex: 1d20+2" />
-    <button onclick="roll()">Rolar!</button>
+    <header>
+        <h1>🎲 Dice-Master</h1>
+    </header>
 
-    <pre id="output"></pre>
+    <main class="card">
+
+        <div class="input-area">
+            <label for="expr">Expressão de dados:</label>
+            <input id="expr" placeholder="Ex: 2d6+1 ou 1d20" />
+            <button onclick="roll()">Rolar Dados</button>
+        </div>
+
+        <pre id="output" class="result"></pre>
+    </main>
+
+    <footer>
+        <p>Desenvolvido por Jhonatas — Projeto Fullstack para Portfólio</p>
+    </footer>
 
     <script src="script.js"></script>
 </body>
